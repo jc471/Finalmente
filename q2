@@ -2,13 +2,50 @@
 
 A.  Explain what recursion is and when it is useful.
     Explain what the |termination step| and |recursion step| are in a recursive method.
+    Recursion is a base programming way in java, which a method calls itself to solve some problem. The method that uses the way is recursion.  
+    Recursion can solve many programing problems.
 
 B.  Describe the difference between a Queue and a Stack.
+    The main difference between the two is how new elements enter the list and old elements leave the list.
+    Stack is defined as a list of element in which we can insert or delete elements only at the top of the stack.
+    Queue is a collection of the same type of element.It is a linear list in which insertions can take place at one end of the list 
 
 C.  Write a class for an element of a doublely-linked list.
+    public class DLnk{
+    
+      private Object payload;
+      private DLnk next;
+      private DLnk prev;
+      
+      public DLnk(){}
+      
+      public DLnk(Object obj){
+      this.payload=obj;}
+  
+      public DLnk(DLnk next, DLnk prev){
+        this.next=next;
+        this.prev=prev;}
+  
+      public DLnk(DLnk next, DLnk prev, Object payload){
+        this.next = next;
+        this.prev=prev;
+        this.payload = payload;}
+        }
+    
+    public class DLinkList{
+    
+      private DLnk head = new DLnk();
+      public int length = 0;
+      }
 
 D.  Explain what a Merkle Tree is.  
     Describe the structure and purpose of a Merkle Tree.
     What is the Merkle root?
     What is the function of a certificate in this data structure?
+    
+     Merkle Tree is a tree where the leaf nodes contain the hashes of some data blocks, and the internal nodes contain hashes of their 
+     children. It provides a quick way to verify data.Merkle tree are useful because they allow efficient and secure verification of
+     the contents of large data structures. Merkle trees are a generalization of hash lists and hash chains.
+    
+    the Merkle root is the hash of all the hashes of all the transactions in the block. The Merkle root is included in the block header.
     
