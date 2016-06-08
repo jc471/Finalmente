@@ -11,32 +11,35 @@ B.  Describe the difference between a Queue and a Stack.
     Queue is a collection of the same type of element.It is a linear list in which insertions can take place at one end of the list 
 
 C.  Write a class for an element of a doublely-linked list.
-    public class DLnk{
-    
-      private Object payload;
-      private DLnk next;
-      private DLnk prev;
-      
-      public DLnk(){}
-      
-      public DLnk(Object obj){
-      this.payload=obj;}
+    public class DLnkList{
   
-      public DLnk(DLnk next, DLnk prev){
-        this.next=next;
-        this.prev=prev;}
+       private DLnk head = new DLnk();
+       public int length = 0;
   
-      public DLnk(DLnk next, DLnk prev, Object payload){
-        this.next = next;
-        this.prev=prev;
-        this.payload = payload;}
-        }
-    
-    public class DLinkList{
-    
-      private DLnk head = new DLnk();
-      public int length = 0;
-      }
+    public DLnkList(){}
+  
+    public void addDLnk(DLnk newlink){
+       newlink.setNext(this.head);
+       this.head.setPrev(newlink);
+       this.head=newlink;
+       length=length + 1;}
+
+    public DLnk getiLnk(int i){
+       DLnk it = this.head;
+       while(i>0){
+       it=it.getNext();
+       i=i-1;}
+     return it;}
+  
+    public void removeHead(){
+       this.head=this.head.getNext();
+       this.head.setPrev(null);
+       length = length -1;}
+  
+    public DLnk getHead(){
+       return this.head;}
+   
+     }
 
 D.  Explain what a Merkle Tree is.  
     Describe the structure and purpose of a Merkle Tree.
@@ -49,3 +52,5 @@ D.  Explain what a Merkle Tree is.
     
     the Merkle root is the hash of all the hashes of all the transactions in the block. The Merkle root is included in the block header.
     
+    The certificate of Merkle tree is a simple binary tree consisting of hashed leaves and nodes.Leaves are the hashes of individual
+    certificates that have been appended to the log. Nodes are the hashes of paired child leaves or paired child nodes.
