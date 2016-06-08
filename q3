@@ -1,18 +1,41 @@
 333333333
 
 A.  Explain how digital signature works with public/private keypairs.
-
+    A digital signature is a mathematical technique used to validate the authenticity and integrity of a message, software or digital document.
+    Digital signatures are based on public key cryptography.one private and one public. To create a digital signature, signing software 
+    creates a one-way hash of the electronic data to be signed. The private key is then used to encrypt the hash.
+    
 B.  Identify your favorite Java project this semester.  
     Describe two things you learned by doing the project.
     Describe two ways in which the project could be improved or expanded.
+    My favorite java project is Cards. Because it was like a game. So i was interesting. 
+    I leaned how to use for()and return() to objects.
+    
     
 C.  Describe two advantages of object-oriented programming.
     Describe two disadvantages of object-oriented programming.
+    
+    Advantages:
+    Code Reuse and Recycling: Objects created for Object Oriented Programs can easily be reused in other programs.
+    Design Benefits: Large programs are very difficult to write. Object Oriented Programs force designers to go through an extensive planning phase, 
+    which makes for better designs with less flaws. In addition, once a program reaches a certain size, Object Oriented Programs are actually easier 
+    to program than non-Object Oriented ones.
+    
+    Disadvantages:
+    Size: Object Oriented programs are much larger than other programs. In the early days of computing, space on hard drives, floppy drives 
+    and in memory was at a premium. Today we do not have these restrictions.
+    Speed: Object Oriented programs are slower than other programs, partially because of their size. Other aspects of Object Oriented 
+    Programs also demand more system resources, thus slowing the program down.
     
 D.  Consider the following PYTHON code for the MNode class given below.
     What is the difference in the way Python and Java handle the declaration of datatypes?
     Explain the difference in how constructors are written in Python vs Java.
     Which language do you prefer?  Explain why.
+    Python dosen't need declaration of the datatypes.
+    You need to call method explicitly but constructor is called implicitly by Java programming language during object instantiation.
+    If you have overloaded constructor than you can call them using  this keyword as this() constructor, you can even call super class 
+    constructor using super() keyword.
+    I prefer to use java. Because java is more easier than python for me.
 -------------------------------------------------------------------------------------
     import hashlib
 
